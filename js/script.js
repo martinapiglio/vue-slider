@@ -50,6 +50,11 @@ const { createApp } = Vue
                 this.activeImgIndex--;
             };
 
+        },
+
+        //BONUS 1
+        showSlide(setIndex) {
+            this.activeImgIndex = setIndex;
         }
 
     }
