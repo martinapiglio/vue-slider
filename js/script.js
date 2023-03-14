@@ -26,7 +26,8 @@ const { createApp } = Vue
                 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.'
             ]
         },
-        activeImgIndex: 0
+        activeImgIndex: 0,
+        autoplay: '',
       }
     },
 
@@ -55,6 +56,15 @@ const { createApp } = Vue
         //BONUS 1
         showSlide(setIndex) {
             this.activeImgIndex = setIndex;
+        },
+
+        //BONUS2 + BONUS3
+        slidesAutoplay() {
+            autoplay = setInterval(this.next , 1000);
+        },
+
+        stopSlidesAutoplay() {
+            clearInterval(autoplay);
         }
 
     }
