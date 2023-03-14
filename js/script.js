@@ -60,7 +60,7 @@ const { createApp } = Vue
 
         //BONUS2 + BONUS3
         slidesAutoplay() {
-            autoplay = setInterval(this.next , 1000);
+            autoplay = setInterval(this.next , 3000);
         },
 
         stopSlidesAutoplay() {
