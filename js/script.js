@@ -31,6 +31,10 @@ const { createApp } = Vue
       }
     },
 
+    mounted() {
+        this.slidesAutoplay();
+    },
+
     methods: {
 
         next() {
@@ -60,11 +64,11 @@ const { createApp } = Vue
 
         //BONUS2 + BONUS3
         slidesAutoplay() {
-            autoplay = setInterval(this.next , 3000);
+            this.autoplay = setInterval(this.next,3000);
         },
 
         stopSlidesAutoplay() {
-            clearInterval(autoplay);
+            clearInterval(this.autoplay);
         }
 
     }
